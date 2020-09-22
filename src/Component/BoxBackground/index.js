@@ -27,7 +27,7 @@ const BoxBackground = (props) => {
 };
 
 BoxBackground.prototype = {
-  contente: PropTypes.arrayOf(PropTypes.element).isRequired,
+  content: PropTypes.arrayOf(PropTypes.element).isRequired,
   onPressItem: PropTypes.func,
 };
 
