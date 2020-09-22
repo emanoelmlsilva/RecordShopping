@@ -13,7 +13,7 @@ const metrics = {
   baseRadius: 10,
   tripleBaseRadius: 30,
   smallBorder: 1,
-  baseBorder: 5,
+  baseBorder: 10,
   baseElevetaion: 5,
   screenWidth: width < height ? width : height,
   screenHeight: width < height ? height : width,
