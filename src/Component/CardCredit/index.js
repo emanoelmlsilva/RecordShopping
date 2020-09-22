@@ -24,7 +24,11 @@ const CardCredit = (props) => {
     return (
       <View style={styles.containerCredit}>
         <MaterialCommunityIcons
-          name="account-circle"
+          name={
+            userCard.isCardholder
+              ? "account-circle"
+              : "account-supervisor-circle"
+          }
           size={25}
           color={colors.colorTextPrimary}
         />
