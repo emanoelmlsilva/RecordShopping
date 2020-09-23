@@ -4,7 +4,7 @@ import React from "react";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import Home from "./Screen/Home";
+import HomeStack from "./Screen/HomeStack";
 import DrawerContent from "./Screen/DrawerContent";
 const routes = () => {
   const Drawer = createDrawerNavigator();
@@ -12,7 +12,7 @@ const routes = () => {
   return (
     <NavigationContainer>
       <Drawer.Navigator drawerContent={(props) => <DrawerContent {...props} />}>
-        <Drawer.Screen name="Home" component={Home} />
+        <Drawer.Screen name="Home" component={HomeStack} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
