@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  View,
-  Text,
-  SafeAreaView,
-  StatusBar,
-  ScrollView,
-  FlatList,
-} from "react-native";
+import { View, Text, SafeAreaView, StatusBar, FlatList } from "react-native";
 import CardCredit from "../../Component/CardCredit";
 import BoxBackground from "../../Component/BoxBackground";
 import { colors } from "../../styles";
