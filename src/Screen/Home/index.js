@@ -31,8 +31,9 @@ const Home = ({ navigation }) => {
   };
 
   const mountPreviewPay = () => {
-    return data.shopping.map((item) => (
+    return data.shopping.map((item, index) => (
       <PreviewSpend
+        key={String(index)}
         type={item.payment.type}
         nickName={
           item.payment.type === "credit"
