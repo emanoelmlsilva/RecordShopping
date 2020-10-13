@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     width: metrics.screenWidth * WIDTH_PORCENTAGE,
     justifyContent: "flex-start",
     alignItems: "center",
-    paddingTop: metrics.basePadding,
+    paddingTop: metrics.doubleBaseMargin,
     borderTopLeftRadius: metrics.baseBorder,
     borderTopRightRadius: metrics.baseBorder,
     backgroundColor: colors.colorSecondary,
