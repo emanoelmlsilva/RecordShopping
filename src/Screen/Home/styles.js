@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     height: metrics.screenHeight * 0.25,
     marginLeft: metrics.basePadding,
     marginRight: metrics.smallMargin,
-    marginBottom: metrics.tripleBaseMargin,
+    marginBottom: metrics.doubleBaseMargin,
   },
   containerTextEmpty: {
     justifyContent: "center",
