@@ -1,12 +1,11 @@
 import { StyleSheet } from "react-native";
-import { colors, fonts, metrics } from "../../styles";
-import { color } from "react-native-reanimated";
+import { colors, metrics } from "../../styles";
 
-const HEIGHT_PERCENTE = 0.88;
+const HEIGHT_PORCENTAGE = 0.5;
+const WIDTH_PORCENTAGE = 0.95;
 
 const styles = StyleSheet.create({
   container: {
-    height: metrics.screenHeight * HEIGHT_PERCENTE,
     alignItems: "center",
     justifyContent: "space-between",
     paddingTop: metrics.basePadding,
@@ -15,14 +14,25 @@ const styles = StyleSheet.create({
     height: metrics.screenHeight * 0.25,
     marginLeft: metrics.basePadding,
     marginRight: metrics.smallMargin,
+    marginBottom: metrics.doubleBaseMargin,
   },
   containerTextEmpty: {
     justifyContent: "center",
     alignItems: "center",
-    height: metrics.screenHeight * 0.5,
+    height: metrics.screenHeight * HEIGHT_PORCENTAGE,
   },
   textEmpty: {
     color: "#0066FF",
+  },
+  containerItem: {
+    height: metrics.screenHeight,
+    width: metrics.screenWidth * WIDTH_PORCENTAGE,
+    justifyContent: "flex-start",
+    alignItems: "center",
+    paddingTop: metrics.doubleBaseMargin,
+    borderTopLeftRadius: metrics.baseBorder,
+    borderTopRightRadius: metrics.baseBorder,
+    backgroundColor: colors.colorSecondary,
   },
 });
 

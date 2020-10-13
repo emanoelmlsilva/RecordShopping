@@ -1,0 +1,116 @@
+{
+  "user": {
+    "id": 1,
+    "name": "Emanoel",
+    "nickName": "El Barto"
+  },
+  "shopping": [
+    {
+      "date": "12 ABR",
+      "name": "biscoito",
+      "store": "lula mercadihnho",
+      "payment": {
+        "type": "money",
+        "price": "56,45",
+        "parcel": "",
+        "name": "Emanoel",
+        "cardName": "Silva",
+        "cardNickName": "El Silva"
+      }
+    },
+    {
+      "date": "12 ABR",
+      "name": "biscoito",
+      "store": "lula mercadihnho",
+      "payment": {
+        "type": "credit",
+        "price": "356,75",
+        "parcel": "6",
+        "name": "Chico",
+        "cardName": "boludo",
+        "cardNickName": "El Chicos"
+      }
+    },
+    {
+      "date": "12 ABR",
+      "name": "biscoito",
+      "store": "lula mercadihnho",
+      "payment": {
+        "type": "money",
+        "price": "56,45",
+        "parcel": "",
+        "name": "Emanoel",
+        "cardName": "Silva",
+        "cardNickName": "El Silva"
+      }
+    },
+    {
+      "date": "12 ABR",
+      "name": "biscoito",
+      "store": "lula mercadihnho",
+      "payment": {
+        "type": "credit",
+        "price": "356,75",
+        "parcel": "6",
+        "name": "Chico",
+        "cardName": "boludo",
+        "cardNickName": "El Chicos"
+      }
+    },
+    {
+      "date": "12 ABR",
+      "name": "biscoito",
+      "store": "lula mercadihnho",
+      "payment": {
+        "type": "money",
+        "price": "56,45",
+        "parcel": "",
+        "name": "Emanoel",
+        "cardName": "Silva",
+        "cardNickName": "El Silva"
+      }
+    },
+    {
+      "date": "12 ABR",
+      "name": "biscoito",
+      "store": "lula mercadihnho",
+      "payment": {
+        "type": "credit",
+        "price": "356,75",
+        "parcel": "6",
+        "name": "Chico",
+        "cardName": "boludo",
+        "cardNickName": "El Chicos"
+      }
+    },
+    {
+      "date": "",
+      "name": "",
+      "store": "",
+      "payment": {
+        "type": "init",
+        "price": "",
+        "parcel": "",
+        "name": "Chico",
+        "cardName": "boludo",
+        "cardNickName": "El Chicos"
+      }
+    }
+  ],
+  "cards": [
+    {
+      "name": "",
+      "nickName": "",
+      "moneyCurrent": "",
+      "isCardholder": false,
+      "color": "#ce03ff"
+    },
+    {
+      "name": "Chico",
+      "nickName": "El Chico",
+      "moneyCurrent": "34.90",
+      "isCardholder": true,
+      "color": "#0066ff"
+    }
+  ]
+}
