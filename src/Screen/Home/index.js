@@ -1,199 +1,59 @@
 import React from "react";
-import { View, Text, SafeAreaView, StatusBar, FlatList } from "react-native";
+import { View, SafeAreaView, StatusBar, FlatList } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
 import CardCredit from "../../Component/CardCredit";
-import BoxBackground from "../../Component/BoxBackground";
 import { colors } from "../../styles";
 import styles from "./styles";
+import PreviewSpend from "../../Component/PreviewSpend";
+import data from "../../assets/data.json";
 
 const Home = ({ navigation }) => {
-  const userCard = [
-    // {
-    //   userCard: {
-    //     name: "Emanoel",
-    //     nickNameCard: "El Barto",
-    //     moneyCurrent: "1.345,00",
-    //     isCardholder: true,
-    //   },
-    //   color: "#ce03ff",
-    // },
-    // {
-    //   userCard: {
-    //     name: "Silva",
-    //     nickNameCard: "El Silva",
-    //     moneyCurrent: "345,00",
-    //     isCardholder: false,
-    //   },
-    //   color: "#ffbb00",
-    // },
-    // {
-    //   userCard: {
-    //     name: "Emanoel",
-    //     nickNameCard: "El Barto",
-    //     moneyCurrent: "1.345,00",
-    //     isCardholder: true,
-    //   },
-    //   color: "#ff00f7",
-    // },
-    // {
-    //   userCard: {
-    //     name: "Silva",
-    //     nickNameCard: "El Silva",
-    //     moneyCurrent: "345,00",
-    //     isCardholder: false,
-    //   },
-    //   color: "#0066ff",
-    // },
-    // {
-    //   userCard: {
-    //     name: "Emanoel",
-    //     nickNameCard: "El Barto",
-    //     moneyCurrent: "1.345,00",
-    //     isCardholder: true,
-    //   },
-    //   color: "#ff0000",
-    // },
-    // {
-    //   userCard: {
-    //     name: "Silva",
-    //     nickNameCard: "El Silva",
-    //     moneyCurrent: "345,00",
-    //     isCardholder: false,
-    //   },
-    //   color: "#e60064",
-    // },
-  ];
+  const mountCards = () => {
+    const listCards = data.cards.map((item) => {
+      const userCard = {
+        name: "",
+        nickNameCard: "",
+        moneyCurrent: "",
+        isCardholder: false,
+        color: "",
+      };
 
-  const content = [
-    <View style={styles.containerTextEmpty}>
-      <Text style={styles.textEmpty}>componente showInfoCard</Text>
-    </View>,
-    // <View>
-    //   <Text>testando 02</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 03</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 04</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 05</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 011</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 022</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 033</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 044</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 055</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 014</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 024</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 034</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 044</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 054</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 0114</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 0224</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 0334</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 0444</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 0554</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 0144</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 023</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 033</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 043</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 053</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 0113</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 0322</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 0333</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 0434</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 0535</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 021</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 012</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 013</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 014</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 015</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 1011</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 1022</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 1033</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 0144</Text>
-    // </View>,
-    // <View>
-    //   <Text>testando 0155</Text>
-    // </View>,
-  ];
+      userCard.name = item.name;
+      userCard.nickNameCard = item.nickName;
+      userCard.moneyCurrent = item.moneyCurrent;
+      userCard.isCardholder = item.isCardholder;
+      userCard.color = item.color;
+
+      return userCard;
+    });
+
+    return listCards;
+  };
+
+  const mountPreviewPay = () => {
+    return data.shopping.map((item) => (
+      <PreviewSpend
+        type={item.payment.type}
+        nickName={
+          item.payment.type === "credit"
+            ? item.payment.cardNickName
+            : item.payment.name
+        }
+        date={item.date}
+        store={item.store}
+        parcel={item.payment.parcel}
+        price={item.payment.price}
+      />
+    ));
+  };
 
   const mountListCard = (listUserCard) => {
     if (listUserCard.length === 0) {
-      console.log("entrou");
       return [<CardCredit />];
     }
 
-    return listUserCard.map((userCard) => {
-      <CardCredit userCard={userCard.userCard} colorCard={userCard.color} />;
+    return listUserCard.map((item) => {
+      return <CardCredit key={item} userCard={item} colorCard={item.color} />;
     });
   };
 
@@ -203,16 +63,27 @@ const Home = ({ navigation }) => {
         barStyle="light-content"
         backgroundColor={colors.colorPrimary}
       />
-      <FlatList
-        data={mountListCard(userCard)}
-        showsHorizontalScrollIndicator={false}
-        keyExtractor={(item, index) => String(index)}
-        horizontal
-        renderItem={({ item }) => (
-          <View style={styles.subContainer}>{item}</View>
-        )}
-      />
-      <BoxBackground content={content} />
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{
+          alignItems: "center",
+          paddingBottom: 10,
+        }}
+      >
+        <FlatList
+          data={mountListCard(mountCards())}
+          showsHorizontalScrollIndicator={false}
+          keyExtractor={(item, index) => String(index)}
+          horizontal
+          renderItem={({ item }) => (
+            <View style={styles.subContainer}>{item}</View>
+          )}
+        />
+
+        <View style={styles.containerItem}>
+          {mountPreviewPay().map((item) => item)}
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
