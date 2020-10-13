@@ -13,14 +13,14 @@ const Home = ({ navigation }) => {
       const userCard = {
         name: "",
         nickNameCard: "",
-        moneyCurrent: "",
+        moneyCurrent: 0,
         isCardholder: false,
         color: "",
       };
 
       userCard.name = item.name;
       userCard.nickNameCard = item.nickName;
-      userCard.moneyCurrent = item.moneyCurrent;
+      userCard.moneyCurrent = parseFloat(item.moneyCurrent);
       userCard.isCardholder = item.isCardholder;
       userCard.color = item.color;
 
@@ -54,7 +54,16 @@ const Home = ({ navigation }) => {
     }
 
     return listUserCard.map((item) => {
-      return <CardCredit key={item} userCard={item} colorCard={item.color} />;
+      return (
+        <CardCredit
+          key={item}
+          name={item.name}
+          nickNameCard={item.nickNameCard}
+          moneyCurrent={item.moneyCurrent}
+          isCardholder={item.isCardholder}
+          colorCard={item.color}
+        />
+      );
     });
   };
 
