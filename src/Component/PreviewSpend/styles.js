@@ -9,7 +9,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     width: metrics.screenWidth * 0.9,
-    flex: 1,
   },
   containerTitle: {
     width: metrics.screenWidth * WIDTH_PERCENTAGE,
