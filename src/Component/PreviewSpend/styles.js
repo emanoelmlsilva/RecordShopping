@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { metrics } from "../../styles";
+import { metrics, colors } from "../../styles";
 
 const HEIGHT_PERCENTAGE = 0.07;
 const WIDTH_PERCENTAGE = 0.8;
@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
   },
   containerIcon: {
     alignItems: "center",
+    width: metrics.screenWidth * 0.08,
     height: metrics.screenHeight * 0.125,
   },
   divider: {
