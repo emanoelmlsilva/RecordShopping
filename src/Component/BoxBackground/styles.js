@@ -1,23 +1,18 @@
 import { StyleSheet } from "react-native";
 
-import { colors, metrics, fonts } from "../../styles/index";
+import { metrics, general } from "../../styles/index";
 
-const HEIGHT_PORCENTAGE = 0.6;
-const WIDTH_PORCENTAGE = 0.96;
+const WIDTH_PORCENTAGE = 0.95;
 
 const styles = StyleSheet.create({
   container: {
-    width: metrics.screenWidth * WIDTH_PORCENTAGE,
-    height: metrics.screenHeight * HEIGHT_PORCENTAGE,
-    alignItems: "center",
-    borderTopLeftRadius: metrics.baseBorder,
-    borderTopRightRadius: metrics.baseBorder,
-    backgroundColor: colors.colorSecondary,
+    ...general.defaultContainerBox,
   },
   containerItem: {
-    padding: metrics.baseBorder,
-    margin: metrics.smallMargin,
-    width: metrics.screenWidth * 0.9,
+    padding: metrics.smallPadding,
+    justifyContent: "center",
+    alignItems: "center",
+    width: metrics.screenWidth * WIDTH_PORCENTAGE,
   },
 });
 
