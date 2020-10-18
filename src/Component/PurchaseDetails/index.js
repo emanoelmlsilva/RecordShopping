@@ -3,12 +3,14 @@ import { View, Text } from "react-native";
 import { Divider } from "react-native-paper";
 import PropTypes from "prop-types";
 import styles from "./styles";
+import Date from "../../util/Date";
 
 const PurchaseDetails = (props) => {
-  const { date, month, year, store, shoppingStores } = props;
+  const { day, month, year, store, shoppingStores } = props;
+  const dateFormated = Date.relativeDate(Date.mountDate(day, month, year));
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{`${date} ${month} ${year}`}</Text>
+      <Text style={styles.title}>{`${dateFormated}`}</Text>
       <Divider style={styles.divider} />
       <View style={styles.subContainer}>
         <Text style={styles.textStore}>{store}</Text>
@@ -29,7 +31,7 @@ const PurchaseDetails = (props) => {
 };
 
 PurchaseDetails.propTypes = {
-  date: PropTypes.string.isRequired,
+  day: PropTypes.string.isRequired,
   month: PropTypes.string.isRequired,
   store: PropTypes.string.isRequired,
   year: PropTypes.string,
