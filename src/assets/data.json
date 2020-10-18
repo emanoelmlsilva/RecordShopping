@@ -6,78 +6,120 @@
   },
   "shopping": [
     {
-      "date": "12 ABR",
+      "date": "17 09 2020",
       "name": "biscoito",
       "store": "lula mercadihnho",
+      "category": "diversos",
       "payment": {
         "type": "money",
         "price": "56,45",
-        "parcel": "",
+        "parcel": "2",
+        "amount": "7",
         "name": "Emanoel",
         "cardName": "Silva",
         "cardNickName": "El Silva"
       }
     },
     {
-      "date": "12 ABR",
+      "date": "16 09 2020",
       "name": "biscoito",
       "store": "lula mercadihnho",
+      "category": "diversos",
+      "payment": {
+        "type": "money",
+        "price": "56,45",
+        "parcel": "3",
+        "amount": "7",
+        "name": "Emanoel",
+        "cardName": "Silva",
+        "cardNickName": "El Silva"
+      }
+    },
+    {
+      "date": "15 09 2020",
+      "name": "biscoito",
+      "store": "lula mercadihnho",
+      "category": "diversos",
+      "payment": {
+        "type": "money",
+        "price": "56,45",
+        "parcel": "30",
+        "amount": "7",
+        "name": "Emanoel",
+        "cardName": "Silva",
+        "cardNickName": "El Silva"
+      }
+    },
+    {
+      "date": "14 09 2020",
+      "name": "biscoito",
+      "store": "lula mercadihnho",
+      "category": "diversos",
       "payment": {
         "type": "credit",
         "price": "356,75",
         "parcel": "6",
+        "amount": "3",
         "name": "Chico",
         "cardName": "boludo",
         "cardNickName": "El Chicos"
       }
     },
     {
-      "date": "12 ABR",
+      "date": "13 09 2020",
       "name": "biscoito",
       "store": "lula mercadihnho",
+      "category": "diversos",
       "payment": {
         "type": "money",
         "price": "56,45",
-        "parcel": "",
+        "parcel": "1",
+        "amount": "1",
         "name": "Emanoel",
         "cardName": "Silva",
         "cardNickName": "El Silva"
       }
     },
     {
-      "date": "12 ABR",
+      "date": "12 09 2020",
       "name": "biscoito",
       "store": "lula mercadihnho",
+      "category": "diversos",
       "payment": {
         "type": "credit",
         "price": "356,75",
         "parcel": "6",
+        "amount": "4",
         "name": "Chico",
         "cardName": "boludo",
         "cardNickName": "El Chicos"
       }
     },
     {
-      "date": "12 ABR",
+      "date": "11 09 2020",
       "name": "biscoito",
       "store": "lula mercadihnho",
+      "category": "diversos",
       "payment": {
         "type": "money",
         "price": "56,45",
         "parcel": "",
+        "amount": "4",
         "name": "Emanoel",
         "cardName": "Silva",
         "cardNickName": "El Silva"
       }
     },
     {
-      "date": "12 ABR",
+      "date": "10 09 2020",
       "name": "biscoito",
       "store": "lula mercadihnho",
+      "category": "diversos",
       "payment": {
         "type": "credit",
         "price": "356,75",
         "parcel": "6",
+        "amount": "2",
         "name": "Chico",
         "cardName": "boludo",
         "cardNickName": "El Chicos"
@@ -87,10 +129,12 @@
       "date": "",
       "name": "",
       "store": "",
+      "category": "",
       "payment": {
         "type": "init",
         "price": "",
         "parcel": "",
+        "amount": "",
         "name": "Chico",
         "cardName": "boludo",
         "cardNickName": "El Chicos"

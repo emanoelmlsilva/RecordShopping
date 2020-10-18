@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     color: "#0066FF",
   },
   containerItem: {
-    height: metrics.screenHeight,
+    flex: 1,
     width: metrics.screenWidth * WIDTH_PORCENTAGE,
     justifyContent: "flex-start",
     alignItems: "center",

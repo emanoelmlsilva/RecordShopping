@@ -1,6 +1,8 @@
 import colors from "./colors";
 import metrics from "./metrics";
 
+const WIDTH_PORCENTAGE = 0.95;
+
 const general = {
   iconSize: {
     bigger: metrics.screenWidth * 0.07,
@@ -22,6 +24,14 @@ const general = {
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: colors.colorPrimary,
+  },
+  defaultContainerBox: {
+    flex: 1,
+    width: metrics.screenWidth * WIDTH_PORCENTAGE,
+    alignItems: "center",
+    borderTopLeftRadius: metrics.baseBorder,
+    borderTopRightRadius: metrics.baseBorder,
+    backgroundColor: colors.colorSecondary,
   },
 };
 

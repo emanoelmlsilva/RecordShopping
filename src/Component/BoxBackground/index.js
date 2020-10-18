@@ -1,11 +1,11 @@
 import React from "react";
-import { View, TouchableOpacity } from "react-native";
-import styles from "./styles";
+import { View } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
 import PropTypes from "prop-types";
+import styles from "./styles";
 
 const BoxBackground = (props) => {
-  const { content, onPressItem } = props;
+  const { content } = props;
   return (
     <View style={styles.container}>
       <FlatList
@@ -13,26 +13,17 @@ const BoxBackground = (props) => {
         showsVerticalScrollIndicator={false}
         keyExtractor={(item, index) => String(index)}
         renderItem={({ item }) => (
-          <TouchableOpacity
-            onPress={() => onPressItem()}
-            key={item.id}
-            style={styles.containerItem}
-          >
+          <View key={item.id} style={styles.containerItem}>
             {item}
-          </TouchableOpacity>
+          </View>
         )}
       />
     </View>
   );
 };
 
-BoxBackground.prototype = {
+BoxBackground.propTypes = {
   content: PropTypes.arrayOf(PropTypes.element).isRequired,
-  onPressItem: PropTypes.func,
-};
-
-BoxBackground.defaultProps = {
-  onPressItem: () => {},
 };
 
 export default BoxBackground;
