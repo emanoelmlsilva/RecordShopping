@@ -1,13 +1,17 @@
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
-
 import PropTypes from "prop-types";
 import { Divider } from "react-native-paper";
+import Date from "../../util/Date";
 import styles from "./styles";
 
 const PreviewSpend = (props) => {
   const { type, nickName, date, store, parcel, price } = props;
+  const [day, month, year] = date.split(" ");
+  const dateFormated =
+    type === "init" ? "" : Date.relativeDate(Date.mountDate(day, month, year));
+
   const types = [
     { type: "init", name: "star" },
     { type: "credit", name: "credit-card" },
@@ -54,7 +58,7 @@ const PreviewSpend = (props) => {
           <Text style={styles.title}>
             {`${type === "credit" ? "Cartão" : "Dinheiro"} (${nickName})`}
           </Text>
-          <Text>{date}</Text>
+          <Text>{dateFormated}</Text>
         </View>
         <View style={styles.containerInfor}>
           <Text>{store}</Text>
