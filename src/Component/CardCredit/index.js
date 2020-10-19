@@ -2,11 +2,14 @@ import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import PropTypes from "prop-types";
+import { LinearGradient } from "expo-linear-gradient";
 import styles from "./styles";
 import { colors } from "../../styles";
 
 const CardCredit = (props) => {
   const {
+    codCard,
+    invoiceDay,
     name,
     nickNameCard,
     moneyCurrent,
@@ -30,17 +33,20 @@ const CardCredit = (props) => {
     }
     return (
       <View style={styles.containerCredit}>
-        <MaterialCommunityIcons
-          name={isCardholder ? "account-circle" : "account-supervisor-circle"}
-          size={25}
-          color={colors.colorTextPrimary}
-        />
+        <View style={styles.containerHeader}>
+          <MaterialCommunityIcons
+            name={isCardholder ? "account-circle" : "account-supervisor-circle"}
+            size={25}
+            color={colors.colorTextPrimary}
+          />
+          <Text>{codCard}</Text>
+        </View>
         <View style={styles.containerTitle}>
           <Text style={styles.title}>{name}</Text>
           <Text style={styles.subTitle}>{nickNameCard}</Text>
         </View>
         <View style={styles.containerFooter}>
-          <Text style={styles.textDefault}>Gasto Do Mês:</Text>
+          <Text style={styles.textDefault}>{invoiceDay}</Text>
           <Text style={styles.textDefault}>
             R$
             {moneyCurrent}
@@ -51,7 +57,10 @@ const CardCredit = (props) => {
   };
 
   return (
-    <View
+    <LinearGradient
+      start={{ x: 1, y: 0 }}
+      end={{ x: 0, y: 1 }}
+      colors={colorCard}
       style={[
         styles.container,
         {
@@ -60,11 +69,13 @@ const CardCredit = (props) => {
       ]}
     >
       {changedItem()}
-    </View>
+    </LinearGradient>
   );
 };
 
 CardCredit.propTypes = {
+  codCard: PropTypes.string.isRequired,
+  invoiceDay: PropTypes.string,
   name: PropTypes.string.isRequired,
   nickNameCard: PropTypes.string,
   moneyCurrent: PropTypes.number,
@@ -74,6 +85,7 @@ CardCredit.propTypes = {
 };
 
 CardCredit.defaultProps = {
+  invoiceDay: "",
   nickNameCard: "",
   moneyCurrent: 0,
   colorCard: colors.colorSecondary,
