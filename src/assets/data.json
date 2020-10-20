@@ -10,16 +10,63 @@
       "nameCard": "",
       "nickNameCard": "",
       "moneyCurrent": "",
+      "invoiceDay": "10/08",
       "isCardholder": false,
-      "color": "#ce03ff"
+      "color": ["#C4C4BE", "#000"]
     },
     {
       "codCard": "001",
+      "nameCard": "Emanoel da silva medeiros",
+      "nickNameCard": "El Barto",
+      "moneyCurrent": "3400.90",
+      "invoiceDay": "10/08",
+      "isCardholder": true,
+      "color": ["#ce03ff", "#00FF84"]
+    },
+    {
+      "codCard": "002",
       "nameCard": "Chico",
       "nickNameCard": "El Chico",
       "moneyCurrent": "34.90",
+      "invoiceDay": "10/08",
       "isCardholder": true,
-      "color": "#0066ff"
+      "color": ["#FDE500", "#ff00f7"]
+    },
+    {
+      "codCard": "003",
+      "nameCard": "Chico",
+      "nickNameCard": "El Chico",
+      "moneyCurrent": "34.90",
+      "invoiceDay": "10/08",
+      "isCardholder": true,
+      "color": ["#6C00FF", "#00F3FF"]
+    },
+    {
+      "codCard": "004",
+      "nameCard": "Chico",
+      "nickNameCard": "El Chico",
+      "moneyCurrent": "34.90",
+      "invoiceDay": "10/08",
+      "isCardholder": true,
+      "color": ["#00F9FF", "#09FF00"]
+    },
+    {
+      "codCard": "005",
+      "nameCard": "Chico",
+      "nickNameCard": "El Chico",
+      "moneyCurrent": "34.90",
+      "invoiceDay": "10/08",
+      "isCardholder": true,
+      "color": ["#FF008D", "#FF6A00"]
+    },
+    {
+      "codCard": "006",
+      "nameCard": "Chico",
+      "nickNameCard": "El Chico",
+      "moneyCurrent": "34.90",
+      "invoiceDay": "10/08",
+      "isCardholder": true,
+      "color": ["#FF00AA", "#1DFF00"]
     }
   ],
   "shopping": [
