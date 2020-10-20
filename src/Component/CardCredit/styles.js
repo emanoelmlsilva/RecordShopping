@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     height: metrics.screenHeight * HEIGHT_PERCENTE,
     width: metrics.screenWidth * WIDTH_PERCENTER,
     borderRadius: metrics.doubleBaseBorder,
-    elevation: 15,
+    elevation: metrics.baseElevetaion,
   },
   containerHeader: {
     flexDirection: "row",
