@@ -85,6 +85,7 @@ const PreviewSpend = (props) => {
         products={products}
         isVisible={showDetail}
         onCancel={handleDeatil}
+        priceTotal={priceTotal}
       />
       <TouchableOpacity onPress={() => handleDeatil()} style={styles.container}>
         <View style={styles.containerIcon}>
@@ -98,6 +99,7 @@ const PreviewSpend = (props) => {
 };
 
 PreviewSpend.propTypes = {
+  products: PropTypes.arrayOf(PropTypes.object),
   type: PropTypes.string.isRequired,
   nickName: PropTypes.string.isRequired,
   date: PropTypes.string,
@@ -111,5 +113,6 @@ PreviewSpend.defaultProps = {
   priceTotal: "",
   store: "",
   date: "",
+  products: [],
 };
 export default PreviewSpend;
