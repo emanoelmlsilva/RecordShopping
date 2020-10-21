@@ -81,14 +81,13 @@ CardCredit.propTypes = {
   moneyCurrent: PropTypes.number,
   isCardholder: PropTypes.bool,
   isAdd: PropTypes.bool,
-  colorCard: PropTypes.string,
+  colorCard: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 CardCredit.defaultProps = {
   invoiceDay: "",
   nickNameCard: "",
   moneyCurrent: 0,
-  colorCard: colors.colorSecondary,
   isCardholder: "",
   isAdd: false,
 };
