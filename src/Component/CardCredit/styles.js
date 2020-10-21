@@ -11,7 +11,11 @@ const styles = StyleSheet.create({
     height: metrics.screenHeight * HEIGHT_PERCENTE,
     width: metrics.screenWidth * WIDTH_PERCENTER,
     borderRadius: metrics.doubleBaseBorder,
-    backgroundColor: colors.colorSecondary,
+    elevation: metrics.baseElevetaion,
+  },
+  containerHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
   text: {
     color: "#0066FF",
@@ -32,8 +36,10 @@ const styles = StyleSheet.create({
     fontSize: fonts.title,
   },
   subTitle: {
-    color: colors.colorSecondary,
+    color: colors.colorTextPrimary,
     fontSize: fonts.regular,
+    paddingLeft: metrics.smallPadding,
+    opacity: 0.6,
   },
   containerFooter: {
     flexDirection: "row",
