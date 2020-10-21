@@ -36,8 +36,20 @@ const styles = StyleSheet.create({
   contianerHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
-    width: metrics.screenWidth * 0.9,
+    width: metrics.screenWidth * 0.8,
     padding: metrics.baseMargin,
+  },
+  containerDetail: {
+    justifyContent: "space-between",
+    width: metrics.screenWidth,
+    flexDirection: "row",
+    paddingLeft: metrics.smallPadding,
+  },
+  contianerFooter: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    height: metrics.screenHeight * 0.04,
+    width: metrics.screenWidth * 0.8,
   },
   divider: {
     margin: metrics.smallMargin,
@@ -58,6 +70,10 @@ const styles = StyleSheet.create({
   date: {
     paddingLeft: 40,
     fontSize: fonts.small,
+  },
+  columnProducts: {
+    textAlign: "left",
+    width: metrics.screenWidth * 0.3,
   },
 });
 
