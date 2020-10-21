@@ -11,19 +11,24 @@ const Home = ({ navigation }) => {
   const mountCards = () => {
     const listCards = data.cards.map((item) => {
       const userCard = {
-        name: "",
+        codCard: 0,
+        nameCard: "",
         nickNameCard: "",
         moneyCurrent: 0,
+        invoiceDay: "",
         isCardholder: false,
-        color: "",
+        color: [""],
+        products: [],
       };
 
-      userCard.name = item.name;
-      userCard.nickNameCard = item.nickName;
+      userCard.codCard = item.codCard;
+      userCard.nameCard = item.nameCard;
+      userCard.nickNameCard = item.nickNameCard;
       userCard.moneyCurrent = parseFloat(item.moneyCurrent);
+      userCard.invoiceDay = item.invoiceDay;
       userCard.isCardholder = item.isCardholder;
       userCard.color = item.color;
-
+      userCard.products = item.products;
       return userCard;
     });
 
@@ -31,39 +36,50 @@ const Home = ({ navigation }) => {
   };
 
   const mountPreviewPay = () => {
-    return data.shopping.map((item, index) => (
-      <PreviewSpend
-        key={String(index)}
-        type={item.payment.type}
-        nickName={
-          item.payment.type === "credit"
-            ? item.payment.cardNickName
-            : item.payment.name
-        }
-        date={item.date}
-        store={item.store}
-        parcel={item.payment.parcel}
-        price={item.payment.price}
-      />
-    ));
+    return data.shopping.map((item) => {
+      return item.purchase.map((objectItem, index) => (
+        <PreviewSpend
+          key={String(index)}
+          type={objectItem.payment.type}
+          nickName={
+            objectItem.payment.type === "credit"
+              ? objectItem.payment.cardNickName
+              : objectItem.payment.name
+          }
+          date={item.date}
+          store={objectItem.store}
+          parcel={objectItem.payment.parcel}
+          priceTotal={objectItem.payment.priceTotal}
+          products={objectItem.products}
+        />
+      ));
+    });
   };
 
   const mountListCard = (listUserCard) => {
-    if (listUserCard.length === 0) {
-      return [<CardCredit />];
+    if (listUserCard.length === 1) {
+      return [
+        <CardCredit codCard="000" name="" colorCard={listUserCard[0].color} />,
+      ];
     }
 
     return listUserCard.map((item) => {
-      return (
-        <CardCredit
-          key={item}
-          name={item.name}
-          nickNameCard={item.nickNameCard}
-          moneyCurrent={item.moneyCurrent}
-          isCardholder={item.isCardholder}
-          colorCard={item.color}
-        />
-      );
+      if (item.nameCard !== "") {
+        return (
+          <CardCredit
+            key={item}
+            codCard={item.codCard}
+            name={item.nameCard}
+            nickNameCard={item.nickNameCard}
+            moneyCurrent={item.moneyCurrent}
+            invoiceDay={item.invoiceDay}
+            isCardholder={item.isCardholder}
+            colorCard={item.color}
+          />
+        );
+      }
+
+      return null;
     });
   };
 
