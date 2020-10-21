@@ -74,94 +74,99 @@
       "date": "17 09 2020",
       "purchase": [
         {
-          "name": "biscoito",
           "store": "lula mercadihnho",
-          "category": "diversos",
           "payment": {
             "type": "money",
             "codCardPurchase": "",
-            "price": "56,45",
-            "parcel": "2",
-            "amount": "7",
+            "priceTotal": "56,45",
+            "parcel": "",
             "name": "Emanoel",
             "cardName": "Silva",
             "cardNickName": "El Silva"
-          }
+          },
+          "products": [
+            {
+              "name": "biscoito",
+              "category": "diversos",
+              "amount": "7",
+              "price": 12
+            }
+          ]
         },
         {
-          "name": "salgadinho",
           "store": "lula mercadihnho",
-          "category": "diversos",
           "payment": {
             "type": "money",
             "codCardPurchase": "",
-            "price": "6,45",
-            "parcel": "1",
-            "amount": "1",
+            "priceTotal": "56,45",
+            "parcel": "",
             "name": "Emanoel",
             "cardName": "Silva",
             "cardNickName": "El Silva"
-          }
+          },
+          "products": [
+            {
+              "name": "salgadinho",
+              "category": "diversos",
+              "amount": "7",
+              "price": 12
+            }
+          ]
         }
       ]
     },
-    {
-      "date": "16 09 2020",
-      "purchase": [
-        {
-          "name": "biscoito",
-          "store": "lula mercadihnho",
-          "category": "diversos",
-          "payment": {
-            "type": "money",
-            "codCardPurchase": "",
-            "price": "56,45",
-            "parcel": "3",
-            "amount": "7",
-            "name": "Emanoel",
-            "cardName": "Silva",
-            "cardNickName": "El Silva"
-          }
-        }
-      ]
-    },
-    {
-      "date": "15 09 2020",
-      "purchase": [
-        {
-          "name": "biscoito",
-          "store": "lula mercadihnho",
-          "category": "diversos",
-          "payment": {
-            "type": "money",
-            "codCardPurchase": "",
-            "price": "56,45",
-            "parcel": "30",
-            "amount": "7",
-            "name": "Emanoel",
-            "cardName": "Silva",
-            "cardNickName": "El Silva"
-          }
-        }
-      ]
-    },
+
     {
       "date": "12 09 2020",
       "purchase": [
         {
-          "name": "biscoito",
           "store": "lula mercadihnho",
-          "category": "diversos",
           "payment": {
             "type": "credit",
-            "codCardPurchase": "001",
-            "price": "356,75",
-            "parcel": "6",
-            "amount": "4",
-            "name": "Chico",
-            "cardName": "boludo",
-            "cardNickName": "El Chicos"
-          }
+            "codCardPurchase": "",
+            "priceTotal": "56,45",
+            "parcel": "",
+            "name": "Emanoel",
+            "cardName": "Silva",
+            "cardNickName": "El Silva"
+          },
+          "products": [
+            {
+              "id": 0,
+              "name": "goiabas",
+              "category": "diversos",
+              "amount": "6",
+              "price": 12.0
+            },
+            {
+              "id": 1,
+              "name": "goiabas",
+              "category": "diversos",
+              "amount": "6",
+              "price": 121.9
+            },
+            {
+              "id": 2,
+              "name": "goiabas",
+              "category": "diversos",
+              "amount": "6",
+              "price": 2.78
+            },
+            {
+              "id": 3,
+              "name": "goiabas",
+              "category": "diversos",
+              "amount": "6",
+              "price": 1.9
+            },
+            {
+              "id": 4,
+              "name": "goiabas",
+              "category": "diversos",
+              "amount": "6",
+              "price": 12.35
+            }
+          ]
         }
       ]
     },
